@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA WAVE - 9s Brand Ad</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#050508;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  color:white;
+}
+
+#ad{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  background:#050508;
+}
+
+.scene{
+  position:absolute;
+  inset:0;
+  opacity:0;
+}
+
+/* =========================
+   SCENE 01
+========================= */
+
+#scene1{
+  opacity:1;
+  background:
+    radial-gradient(circle at 50% 25%, rgba(80,90,120,.25), transparent 35%),
+    linear-gradient(180deg,#20242c,#090a0e);
+  animation:scene1 9s linear infinite;
+}
+
+.station{
+  position:absolute;
+  inset:0;
+}
+
+.wall{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:58%;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(#1e2229,#0d0f13);
+  background-size:120px 100%;
+}
+
+.floor{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:42%;
+  background:
+    linear-gradient(170deg,#15181e,#07080b);
+  transform-origin:bottom;
+}
+
+.light-strip{
+  position:absolute;
+  top:14%;
+  left:15%;
+  width:70%;
+  height:7px;
+  background:#e9edf2;
+  opacity:.25;
+  box-shadow:0 0 35px rgba(255,255,255,.2);
+}
+
+.person{
+  position:absolute;
+  left:50%;
+  bottom:18%;
+  width:80px;
+  height:250px;
+  transform:translateX(-50%);
+}
+
+.head{
+  position:absolute;
+  top:0;
+  left:20px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#b6bbc5;
+}
+
+.body{
+  position:absolute;
+  top:38px;
+  left:4px;
+  width:74px;
+  height:150px;
+  border-radius:30px 30px 12px 12px;
+  background:linear-gradient(#20242b,#08090c);
+}
+
+.leg{
+  position:absolute;
+  top:178px;
+  width:26px;
+  height:72px;
+  background:#08090c;
+}
+
+.leg1{left:10px;}
+.leg2{right:10px;}
+
+.crowd{
+  position:absolute;
+  width:55px;
+  height:180px;
+  bottom:17%;
+  opacity:.45;
+  filter:blur(3px);
+  animation:crowdMove 1.2s linear infinite;
+}
+
+.crowd::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#979ca7;
+}
+
+.crowd::after{
+  content:"";
+  position:absolute;
+  top:30px;
+  width:55px;
+  height:150px;
+  border-radius:25px;
+  background:#171a20;
+}
+
+.c1{left:8%;animation-delay:.1s}
+.c2{left:20%;animation-delay:.6s}
+.c3{right:15%;animation-delay:.3s}
+.c4{right:5%;animation-delay:.8s}
+
+.city-text{
+  position:absolute;
+  bottom:8%;
+  width:100%;
+  text-align:center;
+  letter-spacing:6px;
+  font-size:13px;
+  color:rgba(255,255,255,.35);
+}
+
+/* =========================
+   EARBUD PRODUCT
+========================= */
+
+.earbud{
+  position:absolute;
+  width:70px;
+  height:110px;
+  border-radius:50px 50px 32px 32px;
+  background:
+    linear-gradient(
+      115deg,
+      #090a0d 0%,
+      #3d4149 35%,
+      #090a0e 70%,
+      #252932 100%
+    );
+  box-shadow:
+    inset 7px 0 12px rgba(255,255,255,.06),
+    0 20px 50px rgba(0,0,0,.65);
+}
+
+.earbud::before{
+  content:"";
+  position:absolute;
+  width:37px;
+  height:37px;
+  left:16px;
+  top:14px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle,#252831 15%,#08090c 60%);
+  border:2px solid #80858d;
+}
+
+.earbud::after{
+  content:"";
+  position:absolute;
+  bottom:-44px;
+  left:25px;
+  width:22px;
+  height:62px;
+  border-radius:0 0 15px 15px;
+  background:linear-gradient(90deg,#101115,#3d4149,#08090c);
+}
+
+.violet-line{
+  position:absolute;
+  width:3px;
+  height:55px;
+  right:8px;
+  top:30px;
+  border-radius:20px;
+  background:#9a4dff;
+  box-shadow:0 0 18px #9a4dff;
+}
+
+/* =========================
+   SCENE 02
+========================= */
+
+#scene2{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(100,50,190,.16),transparent 28%),
+    linear-gradient(180deg,#08090d,#020204);
+  animation:scene2 9s linear infinite;
+}
+
+.case{
+  position:absolute;
+  left:50%;
+  top:54%;
+  width:330px;
+  height:185px;
+  transform:translate(-50%,-50%);
+}
+
+.case-bottom{
+  position:absolute;
+  bottom:0;
+  width:330px;
+  height:135px;
+  border-radius:35px 35px 60px 60px;
+  background:
+    linear-gradient(115deg,#08090c,#2c3038,#0a0b0e);
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.8),
+    inset 4px 5px 12px rgba(255,255,255,.05);
+}
+
+.case-lid{
+  position:absolute;
+  top:-18px;
+  left:0;
+  width:330px;
+  height:105px;
+  border-radius:60px 60px 22px 22px;
+  transform-origin:bottom;
+  background:linear-gradient(#20232a,#07080a);
+  border:1px solid rgba(255,255,255,.1);
+  animation:lidOpen 9s ease-in-out infinite;
+}
+
+.case .earbud.left{
+  left:78px;
+  top:60px;
+  transform:rotate(-8deg) scale(.75);
+}
+
+.case .earbud.right{
+  right:78px;
+  top:60px;
+  transform:rotate(8deg) scale(.75);
+}
+
+.product-glow{
+  position:absolute;
+  width:500px;
+  height:500px;
+  left:calc(50% - 250px);
+  top:calc(50% - 250px);
+  border-radius:50%;
+  background:rgba(130,60,255,.11);
+  filter:blur(90px);
+}
+
+.hand{
+  position:absolute;
+  right:18%;
+  top:21%;
+  width:120px;
+  height:390px;
+  border-radius:70px;
+  background:linear-gradient(90deg,#9c6f61,#ddb09d);
+  transform:rotate(35deg) translateX(360px);
+  opacity:0;
+  animation:handMove 9s ease-in-out infinite;
+}
+
+/* =========================
+   SCENE 03
+========================= */
+
+#scene3{
+  background:
+    radial-gradient(circle at center,#351260 0%,#11081e 32%,#030307 70%);
+  animation:scene3 9s linear infinite;
+}
+
+.listener{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:170px;
+  height:360px;
+  transform:translate(-50%,-50%);
+}
+
+.listener-head{
+  position:absolute;
+  top:0;
+  left:42px;
+  width:88px;
+  height:105px;
+  border-radius:45% 45% 50% 50%;
+  background:linear-gradient(120deg,#bb8b75,#e3b9a3);
+}
+
+.listener-body{
+  position:absolute;
+  top:93px;
+  width:170px;
+  height:267px;
+  border-radius:50px 50px 0 0;
+  background:#07080c;
+}
+
+.listener-earbud{
+  position:absolute;
+  width:20px;
+  height:34px;
+  right:-8px;
+  top:42px;
+  border-radius:20px;
+  background:#181a20;
+  border:1px solid #9a4dff;
+  box-shadow:0 0 20px #9a4dff;
+}
+
+.wave{
+  position:absolute;
+  left:50%;
+  top:50%;
+  border:2px solid rgba(161,86,255,.8);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  opacity:0;
+}
+
+.wave1{
+  width:250px;
+  height:250px;
+  animation:wavePulse 9s ease-out infinite;
+}
+
+.wave2{
+  width:400px;
+  height:400px;
+  animation:wavePulse2 9s ease-out infinite;
+}
+
+.wave3{
+  width:620px;
+  height:620px;
+  animation:wavePulse3 9s ease-out infinite;
+}
+
+.particle{
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#bd7cff;
+  box-shadow:0 0 15px #a855ff;
+  animation:particleFloat 9s linear infinite;
+}
+
+.p1{left:18%;top:65%}
+.p2{left:32%;top:30%}
+.p3{right:20%;top:28%}
+.p4{right:30%;bottom:23%}
+.p5{left:45%;top:18%}
+
+.sound-copy{
+  position:absolute;
+  width:100%;
+  bottom:10%;
+  text-align:center;
+  font-size:clamp(28px,4vw,60px);
+  font-weight:300;
+  letter-spacing:10px;
+  opacity:0;
+  animation:soundText 9s linear infinite;
+}
+
+/* =========================
+   SCENE 04
+========================= */
+
+#scene4{
+  background:
+    radial-gradient(circle at 50% 45%,#49206e 0%,#11101a 32%,#020204 72%);
+  animation:scene4 9s linear infinite;
+}
+
+.hero-halo{
+  position:absolute;
+  left:50%;
+  top:42%;
+  width:550px;
+  height:550px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:
+    radial-gradient(circle,
+      rgba(178,86,255,.6),
+      rgba(120,50,220,.2) 40%,
+      transparent 72%
+    );
+  filter:blur(15px);
+  animation:haloPulse 9s ease-in-out infinite;
+}
+
+.hero-product{
+  position:absolute;
+  left:50%;
+  top:42%;
+  width:380px;
+  height:260px;
+  transform:translate(-50%,-50%);
+  animation:heroPush 9s ease-out infinite;
+}
+
+.hero-case{
+  position:absolute;
+  bottom:0;
+  width:380px;
+  height:165px;
+  border-radius:40px 40px 70px 70px;
+  background:
+    linear-gradient(120deg,#090a0d,#353941,#090a0d);
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.75),
+    inset 7px 4px 14px rgba(255,255,255,.07);
+}
+
+.hero-product .earbud.left{
+  left:90px;
+  top:24px;
+  transform:rotate(-11deg);
+}
+
+.hero-product .earbud.right{
+  right:90px;
+  top:24px;
+  transform:rotate(11deg);
+}
+
+.hero-copy{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:7%;
+  text-align:center;
+  opacity:0;
+  animation:heroCopy 9s linear infinite;
+}
+
+.logo{
+  font-size:clamp(32px,5vw,72px);
+  font-weight:700;
+  letter-spacing:12px;
+}
+
+.tagline{
+  margin-top:12px;
+  color:#c6a5ff;
+  letter-spacing:7px;
+  font-size:clamp(13px,1.7vw,24px);
+}
+
+.cta{
+  display:inline-block;
+  margin-top:22px;
+  padding:12px 34px;
+  border:1px solid #a95fff;
+  border-radius:50px;
+  color:#c997ff;
+  letter-spacing:5px;
+  font-size:13px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes scene1{
+  0%,19%{opacity:1;transform:scale(1)}
+  22%{opacity:0;transform:scale(1.04)}
+  100%{opacity:0}
+}
+
+@keyframes crowdMove{
+  0%{transform:translateX(-50px)}
+  100%{transform:translateX(120px)}
+}
+
+@keyframes scene2{
+  0%,20%{opacity:0}
+  23%,44%{opacity:1}
+  47%{opacity:0}
+  100%{opacity:0}
+}
+
+@keyframes lidOpen{
+  0%,23%{transform:rotateX(0deg)}
+  29%,45%{transform:rotateX(-68deg) translateY(-28px)}
+  100%{transform:rotateX(-68deg)}
+}
+
+@keyframes handMove{
+  0%,29%{
+    opacity:0;
+    transform:rotate(35deg) translateX(360px)
+  }
+
+  32%{
+    opacity:1;
+    transform:rotate(35deg) translateX(120px)
+  }
+
+  38%{
+    opacity:1;
+    transform:rotate(32deg) translateX(20px)
+  }
+
+  44%{
+    opacity:0;
+    transform:rotate(28deg) translateX(-80px)
+  }
+
+  100%{opacity:0}
+}
+
+@keyframes scene3{
+  0%,44%{opacity:0}
+  47%,69%{opacity:1}
+  73%{opacity:0}
+  100%{opacity:0}
+}
+
+@keyframes wavePulse{
+  0%,46%{opacity:0;transform:translate(-50%,-50%) scale(.2)}
+  51%{opacity:1}
+  68%{opacity:0;transform:translate(-50%,-50%) scale(2.3)}
+  100%{opacity:0}
+}
+
+@keyframes wavePulse2{
+  0%,48%{opacity:0;transform:translate(-50%,-50%) scale(.2)}
+  54%{opacity:.8}
+  69%{opacity:0;transform:translate(-50%,-50%) scale(1.8)}
+  100%{opacity:0}
+}
+
+@keyframes wavePulse3{
+  0%,50%{opacity:0;transform:translate(-50%,-50%) scale(.2)}
+  57%{opacity:.6}
+  70%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}
+  100%{opacity:0}
+}
+
+@keyframes particleFloat{
+  0%,45%{
+    opacity:0;
+    transform:translateY(70px) scale(.3)
+  }
+
+  52%{
+    opacity:1;
+  }
+
+  69%{
+    opacity:0;
+    transform:translateY(-150px) scale(2)
+  }
+
+  100%{opacity:0}
+}
+
+@keyframes soundText{
+  0%,50%{
+    opacity:0;
+    transform:translateY(20px)
+  }
+
+  55%,68%{
+    opacity:1;
+    transform:translateY(0)
+  }
+
+  72%,100%{
+    opacity:0;
+  }
+}
+
+@keyframes scene4{
+  0%,69%{opacity:0}
+  73%,100%{opacity:1}
+}
+
+@keyframes heroPush{
+  0%,70%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.7)
+  }
+
+  76%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(.86)
+  }
+
+  100%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1)
+  }
+}
+
+@keyframes haloPulse{
+  0%,70%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.5)
+  }
+
+  78%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1.2)
+  }
+}
+
+@keyframes heroCopy{
+  0%,77%{
+    opacity:0;
+    transform:translateY(18px)
+  }
+
+  83%,100%{
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+/* =========================
+   CONTROL
+========================= */
+
+.control{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+}
+
+button{
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50px;
+  background:rgba(0,0,0,.5);
+  color:white;
+  padding:11px 18px;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+}
+
+button:hover{
+  background:rgba(255,255,255,.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="ad">
+
+<!-- SCENE 01 -->
+<section class="scene" id="scene1">
+
+  <div class="station">
+
+    <div class="wall"></div>
+    <div class="floor"></div>
+    <div class="light-strip"></div>
+
+    <div class="crowd c1"></div>
+    <div class="crowd c2"></div>
+    <div class="crowd c3"></div>
+    <div class="crowd c4"></div>
+
+    <div class="person">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="leg leg1"></div>
+      <div class="leg leg2"></div>
+    </div>
+
+  </div>
+
+  <div class="city-text">
+    NOISE EVERYWHERE
+  </div>
+
+</section>
+
+
+<!-- SCENE 02 -->
+<section class="scene" id="scene2">
+
+  <div class="product-glow"></div>
+
+  <div class="case">
+
+    <div class="case-lid"></div>
+
+    <div class="case-bottom"></div>
+
+    <div class="earbud left">
+      <div class="violet-line"></div>
+    </div>
+
+    <div class="earbud right">
+      <div class="violet-line"></div>
+    </div>
+
+  </div>
+
+  <div class="hand"></div>
+
+</section>
+
+
+<!-- SCENE 03 -->
+<section class="scene" id="scene3">
+
+  <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
+
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+
+  <div class="listener">
+
+    <div class="listener-head">
+      <div class="listener-earbud"></div>
+    </div>
+
+    <div class="listener-body"></div>
+
+  </div>
+
+  <div class="sound-copy">
+    OWN YOUR SOUND.
+  </div>
+
+</section>
+
+
+<!-- SCENE 04 -->
+<section class="scene" id="scene4">
+
+  <div class="hero-halo"></div>
+
+  <div class="hero-product">
+
+    <div class="hero-case"></div>
+
+    <div class="earbud left">
+      <div class="violet-line"></div>
+    </div>
+
+    <div class="earbud right">
+      <div class="violet-line"></div>
+    </div>
+
+  </div>
+
+  <div class="hero-copy">
+
+    <div class="logo">
+      NOVA WAVE
+    </div>
+
+    <div class="tagline">
+      OWN YOUR SOUND.
+    </div>
+
+    <div class="cta">
+      LISTEN NOW
+    </div>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<div class="control">
+  <button onclick="replay()">↻ Replay 9s</button>
+</div>
+
+
+<script>
+
+function replay(){
+
+  const ad =
+    document.getElementById("ad");
+
+  const copy =
+    ad.cloneNode(true);
+
+  ad.parentNode.replaceChild(
+    copy,
+    ad
+  );
+
+}
+
+
+/* ==============================
+   SIMPLE AUDIO EFFECT
+============================== */
+
+let audioContext;
+
+function createClickSound(){
+
+  if(!audioContext){
+
+    audioContext =
+      new (
+        window.AudioContext ||
+        window.webkitAudioContext
+      )();
+
+  }
+
+  const osc =
+    audioContext.createOscillator();
+
+  const gain =
+    audioContext.createGain();
+
+  osc.type="sine";
+
+  osc.frequency.setValueAtTime(
+    700,
+    audioContext.currentTime
+  );
+
+  osc.frequency.exponentialRampToValueAtTime(
+    220,
+    audioContext.currentTime + .08
+  );
+
+  gain.gain.setValueAtTime(
+    .25,
+    audioContext.currentTime
+  );
+
+  gain.gain.exponentialRampToValueAtTime(
+    .001,
+    audioContext.currentTime + .12
+  );
+
+  osc
+    .connect(gain)
+    .connect(audioContext.destination);
+
+  osc.start();
+
+  osc.stop(
+    audioContext.currentTime + .12
+  );
+
+}
+
+
+/* 브라우저 자동재생 제한 때문에
+   첫 화면 클릭 후 소리 활성화 */
+
+let audioStarted=false;
+
+document.addEventListener(
+  "click",
+  function(){
+
+    if(audioStarted) return;
+
+    audioStarted=true;
+
+    /* 이어폰 착용 시점 약 2.8초 */
+
+    setTimeout(
+      createClickSound,
+      2800
+    );
+
+  }
+);
+
+</script>
+
+</body>
+</html>
